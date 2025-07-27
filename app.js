@@ -1,18 +1,5 @@
 // console.log("Project started successfully 🚀");
-
-// const form = document.getElementById('queryForm');
-
-// form.addEventListener('submit', function(e) {
-//     e.preventDefault();
-//     const title = document.getElementById('title').value;
-//     const category = document.getElementById('category').value;
-//     const description = document.getElementById('description').value;
-
-//     const query = { title, category, description };
-//     console.log('Query Submitted:', query);
-//     alert("Query submitted successfully!");
-//     form.reset();
-// });
+// console.log("lets start");
 
 const form = document.getElementById('queryForm');
 
