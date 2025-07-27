@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Project Name</title>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ask a Query - Student Query Portal</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello Team 👋</h1>
-  <p>This is our project starting from scratch.</p>
-  <script src="app.js"></script>
+    <!-- <h1>Hello Team 👋</h1>
+    <p>This is our project starting from scratch.</p> -->
+
+    <div class="main">
+    <div class="form-container">
+        <h1>Ask a Query</h1>
+        <form id="queryForm">
+        <input type="text" id="title" placeholder="Enter your query title" required />
+        <select id="category">
+        <option value="General">General</option>
+        <option value="Exam">Exam</option>
+        <option value="Fees">Fees</option>
+        <option value="Library">Library</option>
+        </select>
+        <textarea id="description" placeholder="Describe your query" rows="5" required></textarea>
+        <button type="submit">Submit Query</button>
+    </form>
+    </div>
+</div>
+    <script src="app.js"></script>
 </body>
 </html>
