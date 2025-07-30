@@ -72,6 +72,7 @@ body {
     color: white;
     transform: translateX(5px);
     box-shadow: 0 4px 15px rgba(41, 98, 255, 0.3);
+     margin-top: 8px;
 }
 
 .nav-item .nav-link .material-symbols-outlined {
@@ -85,6 +86,7 @@ body {
     right: 20px;
     border-top: 1px solid #e2e8f0;
     padding-top: 20px;
+    margin-bottom: 40px;
 }
 
 .main {
@@ -237,6 +239,11 @@ body {
     background-size: 200% 100%;
     animation: loading 1.5s infinite;
 }
+#theme-toggle:hover{
+        background-color: #babcc0;
+        color: #1e293b;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
 
 @keyframes loading {
     0% {
@@ -306,6 +313,11 @@ body {
     .dashboard {
         max-width: 100%;
         padding: 20px;
+    }
+    #theme-toggle:hover{
+        background-color: #babcc0;
+        color: #1e293b;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 }
 
