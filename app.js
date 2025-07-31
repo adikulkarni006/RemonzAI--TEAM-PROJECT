@@ -727,3 +727,45 @@ if ('serviceWorker' in navigator) {
             });
     });
 }
+
+// TOAST QUERY SUBMIT
+function showToast() {
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
+// FEEDBACK NOTIFY 
+document.querySelectorAll('.icon-button').forEach(button => {
+    button.addEventListener('click', () => {
+        document.getElementById('feedback-status').innerText = "Thanks for your feedback!";
+    });
+});
+
+// FILENAME 
+function downloadResponse() {
+    const responseText = document.getElementById('answer').value;
+    const blob = new Blob([responseText], { type: "text/plain" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "𝚁𝚎𝚖𝚘𝚗𝚣𝙰I!_Response.txt";
+    link.click();
+}
+
+// FILE UPLOAD 
+document.getElementById('file-upload').addEventListener('change', function() {
+    const fileName = this.files[0] ? this.files[0].name : 'No file chosen';
+    document.getElementById('file-name').textContent = fileName;
+});
+
+// PROJECT NAME 
+const text = "RemonzAi!";
+let index = 0;
+function type() {
+    if (index < text.length) {
+        document.getElementById("animatedTitle").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, 100);
+    }
+}
+window.onload = type;

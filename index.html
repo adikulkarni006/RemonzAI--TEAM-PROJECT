@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Ask a Query - Student Query Portal</title>
+    <title>Ask a Query - Student Query Portal!</title>
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -17,8 +17,9 @@
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
             </div>
 
-            <button id="theme-toggle" class="btn btn-sm btn-outline-primary">🌙 Dark</button>
-
+            <div class="theme-wrapper">
+                <button id="theme-toggle" class="btn btn-sm btn-outline-primary">🌙 Dark</button>
+            </div>
             
             <ul class="primary-nav nav-list">
                 <li class="nav-item">
@@ -58,30 +59,59 @@
         </nav>
     </div>
 
-    <div class="main">
-        <h2>𝚁𝚎𝚖𝚘𝚗𝚣𝙰𝚒!</h2>
+    <b class="main">
+        <br class="main-header">
+            <h2 id="animatedTitle"></h2>
+            <div class="header-actions">
+                <a href="class=notification-bell" title="Notifications">
+                    <span class="material-symbols-outlined">Notifications</span>
+                </a>
+            </div>
+        </div>
         
         <div class="form-container">
             <h1>Ask a Query</h1>
             <form id="queryForm">
                 <input type="text" id="title" placeholder="Enter your query title" required />
                 <select id="category">
-                    <option value="General">General</option>
-                    <option value="Exam">Exam</option>
-                    <option value="Library">Library</option>
-                    <option value="Technical">Technical</option>
-                    <option value="Academic">Academic</option>
+                    <option value="Academic">📚 Academic</option>
+                    <option value="Exam">📅 Exam</option>
+                    <option value="Technical">💻 Technical</option>
+                    <option value="Library">📖 Library</option>
+                    <option value="Career">🎯 Career</option>
+                    <option value="General">❓General</option>
                 </select>
                 <textarea id="description" placeholder="Describe your query in detail..." rows="5" required></textarea>
+                <div class="file-attachment">
+                <label for="file-upload">Attach a file (optional) </label>
+                <input type="file" id="file-upload" /><p id="file-name">No file chosen</p>
+                </div>
                 <button type="submit">Submit Query</button>
             </form>
         </div>
         
         <div class="form-container">
-            <h1>AI Response</h1>
+            <div class="response-header">
+                <h1>AI Response</h1>
+            </div>
             <textarea id="answer" placeholder="Your answer will appear here..." rows="5" readonly></textarea>
+            <br class="response-feedback">
+                <!-- <button id="copyResponseBtn" class="icon-button" title="Copy to clipboard">
+                    <span class="material-symbols-outlined">content_copy</span>
+                </button> -->
+                <span>Was this helpful?</span>
+                <br><br>
+                <div id="feedback-status" style="color: green;"></div>
+
+                <button class="icon-button" title="Helpful"><span class="material-symbols-outlined">thumb_up</span></button>
+                <button class="icon-button" title="Not Helpful"><span class="material-symbols-outlined">thumb_down</span></button>
+                    <br><br>    <button onclick="downloadResponse()">📥 Download Response</button>
+
+            </div>
+            
         </div>
         
+
         <div class="dashboard">
             <h2>Recent Queries</h2>
             <div class="queries">
@@ -98,6 +128,9 @@
             </div>
         </div>
     </div>
+
+        <div id="toast" class="toast">Query Submitted Successfully!</div>
+
     <script src="app.js"></script>
     <script src="theme.js"></script>
 </body>
