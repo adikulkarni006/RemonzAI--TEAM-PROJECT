@@ -6,15 +6,20 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h2>Signup</h2>
-  <form id="signupForm">
-    <input type="text" id="signup-username" placeholder="Username" required />
-    <input type="password" id="signup-password" placeholder="Password" required />
-    <button type="submit">Sign Up</button>
-  </form>
-
-  <p>Already registered? <a href="login.html">Login here</a></p>
-
+  <div class="Signup_page">
+    <h2>Signup</h2>
+    <form id="signupForm">
+      <label for="">Create username</label>
+      <input type="text" id="signup-username" placeholder="Username" required />
+      <label for="">Create Password</label>
+      <input type="password" id="signup-password" placeholder=" Create Password" required />
+      <input type="password" id="signup-password" placeholder=" Confirm Password" required />
+      
+      <button type="submit">Sign Up</button>
+    </form>
+    <p>Already registered? <a href="login.html">Login here</a></p>
+  </div>
+    
   <script src="auth.js"></script>
 </body>
 </html>
