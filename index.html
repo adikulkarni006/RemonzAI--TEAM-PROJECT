@@ -10,7 +10,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
-    <div class="sidebar">
+
+    <!-- Hamburger Button for Mobile -->
+<button class="hamburger" onclick="toggleSidebar()">❄️</button>
+
+    <div class="sidebar" id="sidebar">
         <nav class="sidebar-nav">
             <div class="logo">
                 <img src="https://imgs.search.brave.com/meXO-eEn98LTbh5_JzcBJt_J1KTCiV6IrlkjG-qhJv8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS12ZWN0b3Iv/Z3JhZGllbnQtbWlu/ZHNlYXJjaC1sb2dv/LXdpdGgtdGFnbGlu/ZV8yMy0yMTQ4ODEw/MzkzLmpwZz9zZW10/PWFpc19oeWJyaWQm/dz03NDA" alt="Logo" />
@@ -50,9 +54,16 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <span class="material-symbols-outlined">logout</span>
-                        <span class="nav-label">Sign Out</span>
+                    <a href="signup.html" class="nav-link">
+                        <span class="material-symbols-outlined">person_add</span>
+                        <span class="nav-label">Signup</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" onclick="logout()" class="nav-link">
+                        <span class="material-symbols-outlined">Login</span>
+                        <span class="nav-label">Login</span>
                     </a>
                 </li>
             </ul>
@@ -133,5 +144,6 @@
 
     <script src="app.js"></script>
     <script src="theme.js"></script>
+    <script src="auth.js"></script>
 </body>
 </html>

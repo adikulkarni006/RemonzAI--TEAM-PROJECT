@@ -769,3 +769,7 @@ function type() {
     }
 }
 window.onload = type;
+
+function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("active");
+}

@@ -10,26 +10,48 @@ body {
     background-color: #f5f5f5;
     text-align: center;
     padding-top: 50px;
+    padding: 20px;
+}
+
+.hamburger {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background-color: #fff;
+    border: none;
+    z-index: 1100;
+    font-size: 35px;
+    cursor: pointer;
 }
 
 
 .sidebar {
-    width: 260px;
-    background: rgba(255, 255, 255, 0.95);
+    width: 250px;
+    background: #f5f5f5;
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     border-radius: 0 20px 20px 0;
-    padding: 20px;
+    padding: 2rem;
     position: fixed;
+    top: 0;
+    left: 0;
     height: 100vh;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
     z-index: 1000;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* justify-content: space-between; */
 }
 
 .logo {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: 30px;
     padding: 15px;
     background: linear-gradient(135deg,  #6366f1, #8b5cf6);
@@ -38,10 +60,11 @@ body {
 }
 
 .logo img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 8px;
+    object-fit: cover;
 }
 
 .logo svg {
@@ -50,7 +73,9 @@ body {
 
 .nav-list {
     list-style: none;
+    padding: 0;
     display: flex;
+    margin: 1rem 0;
     flex-direction: column;
     gap: 8px;
     margin-bottom: 20px;
@@ -66,6 +91,7 @@ body {
     font-weight: 500;
     border-radius: 10px;
     transition: all 0.3s ease;
+    margin-bottom: 1rem;
 }
 
 .nav-item .nav-link:hover {
@@ -88,6 +114,21 @@ body {
     border-top: 1px solid #e2e8f0;
     padding-top: 20px;
     margin-bottom: 40px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .hamburger {
+        display: block;
+    }
 }
 
 .main {
