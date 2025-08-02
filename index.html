@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
-
     <!-- Hamburger Button for Mobile -->
 <button class="hamburger" onclick="toggleSidebar()">❄️</button>
 
@@ -20,11 +19,12 @@
                 <img src="https://imgs.search.brave.com/meXO-eEn98LTbh5_JzcBJt_J1KTCiV6IrlkjG-qhJv8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS12ZWN0b3Iv/Z3JhZGllbnQtbWlu/ZHNlYXJjaC1sb2dv/LXdpdGgtdGFnbGlu/ZV8yMy0yMTQ4ODEw/MzkzLmpwZz9zZW10/PWFpc19oeWJyaWQm/dz03NDA" alt="Logo" />
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
             </div>
-
+<!-- DARK MODE  -->
             <div class="theme-wrapper">
                 <button id="theme-toggle" class="btn btn-sm btn-outline-primary">🌙 Dark</button>
             </div>
             
+<!-- NAV ITEMS  -->
             <ul class="primary-nav nav-list">
                 <li class="nav-item">
                     <a href="#" class="nav-link">
@@ -59,7 +59,6 @@
                         <span class="nav-label">Signup</span>
                     </a>
                 </li>
-
                 <li class="nav-item">
                     <a href="#" onclick="logout()" class="nav-link">
                         <span class="material-symbols-outlined">Login</span>
@@ -69,19 +68,15 @@
             </ul>
         </nav>
     </div>
-
-    <b class="main">
-        <br class="main-header">
+<!-- Notification-BELL  -->
+    <div class="main">
+        <div class="main-header">
             <h2 id="animatedTitle"></h2>
-            <div class="header-actions">
-                <a href="class=notification-bell" title="Notifications">
-                    <span class="material-symbols-outlined">Notifications</span>
-                </a>
-            </div>
         </div>
-        
+        </div>
+<!-- CONTAINER.NO-1  -->
         <div class="form-container">
-            <h1>Ask a Query</h1>
+            <h1>Ask a Query 👨‍💻</h1>
             <form id="queryForm">
                 <input type="text" id="title" placeholder="Enter your query title" required />
                 <select id="category">
@@ -97,16 +92,16 @@
                 <label for="file-upload">Attach a file (optional) </label>
                 <input type="file" id="file-upload" /><p id="file-name">No file chosen</p>
                 </div>
-                <button type="submit">Submit Query</button>
+                <button type="submit">Submit Query ╰⪼</button>
             </form>
         </div>
-        
+<!-- CONTAINER.NO-2  -->
         <div class="form-container">
             <div class="response-header">
-                <h1>AI Response</h1>
+                <h1>AI Response ֎🇦🇮</h1>
             </div>
             <textarea id="answer" placeholder="Your answer will appear here..." rows="5" readonly></textarea>
-            <br class="response-feedback">
+            <div class="response-feedback">
                 <!-- <button id="copyResponseBtn" class="icon-button" title="Copy to clipboard">
                     <span class="material-symbols-outlined">content_copy</span>
                 </button> -->
@@ -116,13 +111,10 @@
 
                 <button class="icon-button" title="Helpful"><span class="material-symbols-outlined">thumb_up</span></button>
                 <button class="icon-button" title="Not Helpful"><span class="material-symbols-outlined">thumb_down</span></button>
-                    <br><br>    <button onclick="downloadResponse()">📥 Download Response</button>
-
+                <br><br>    <button onclick="downloadResponse()">📥 Download Response</button>
             </div>
-            
         </div>
-        
-
+<!-- CONTAINER.NO-3  -->
         <div class="dashboard">
             <h2>Recent Queries</h2>
             <div class="queries">
@@ -139,11 +131,12 @@
             </div>
         </div>
     </div>
-
+<!-- TOAST  -->
         <div id="toast" class="toast">Query Submitted Successfully!</div>
 
     <script src="app.js"></script>
     <script src="theme.js"></script>
     <script src="auth.js"></script>
+    
 </body>
 </html>

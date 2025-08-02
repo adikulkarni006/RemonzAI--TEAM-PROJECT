@@ -10,7 +10,7 @@ body {
     background-color: #f5f5f5;
     text-align: center;
     padding-top: 50px;
-    padding: 20px;
+    padding: 5px;
 }
 
 .hamburger {
@@ -135,11 +135,11 @@ body {
     flex: 1;
     margin-left: 260px;
     padding: 40px;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
-.main h2 {
-    font-size: 48px;
+h2#animatedTitle {
+    font-size: 50px;
     font-weight: 700;
     background: linear-gradient(135deg, #6366f1, #8b5cf6);
     -webkit-background-clip: text;
@@ -156,18 +156,6 @@ body {
     align-items: center;
     margin-bottom: 20px;
 }
-
-.notification-bell {
-    color: inherit;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.notification-bell .material-symbols-outlined {
-    font-size: 28px;
-    vertical-align: middle;
-}
-
 
 .form-container {
     background: rgba(255, 255, 255, 0.95);
@@ -198,7 +186,7 @@ body {
     border: 2px solid #e2e8f0;
     border-radius: 12px;
     outline: none;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     background: rgba(255, 255, 255, 0.8);
 }
 
@@ -285,7 +273,7 @@ body {
     align-items: center;
     margin-bottom: 15px;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .queries:hover {
@@ -441,7 +429,6 @@ body {
 }
 
 /* DARK THEME  */
-
     .theme-wrapper:hover {
     display: flex;
     justify-content: center;
@@ -520,7 +507,6 @@ body {
 }
 }
 
-
     /* ANIMATION EFFECT  */
     h1 {
     width: 180px;
@@ -556,90 +542,123 @@ body {
     visibility: visible;
     opacity: 1;
 }
-/* sign up page styling  */
-body{
-    background-color: #e4e3e3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+/* GIRIJA'S WORK  */
+.login-page {
+    background-color: #fefcbf;
+    margin: 0;
+    padding: 0;
     height: 100vh;
-}
-.Signup_page{
-    height: 400px;
-    max-width: 400px;
-    background: #fff;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: rgba(175, 172, 172, 0.9) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 6px 6px;
-    border: 1px solid rgba(71, 68, 68, 0.2);
+    font-family: Arial, sans-serif;
 }
-.Signup_page h2{
-    font-size: 34px;
+.login-container {
+    background: #5f59f7;
+    padding: 70px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    height: 70vh;
+}
+
+.login-header {
+    text-align: center;
+    margin: 20px 0 40px 0;
+}
+
+.login-header header {
+    color: #333;
+    font-size: 30px;
     font-weight: 600;
-    margin-bottom: 20px;
-    color: #000000;
-    font-style: italic;
 }
-.Signup_page input {
+
+.input-box .input-field {
     width: 100%;
-    padding: 10px;
+    height: 60px;
+    font-size: 17px;
+    padding: 0 15px;
     margin-bottom: 15px;
+    border-radius: 30px;
     border: none;
-    border-radius: 20px;
-    background-color: #ffffff;
-    color: #000000;
-    font-size: 16px;
+    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.05);
     outline: none;
-    box-shadow: 0 4px 15px rgba(41, 98, 255, 0.1);
-    border: 1px solid #e2e8f0;
 }
-input:active{
-    border: 1px solid #8b5cf6;
-    box-shadow: 0 4px 15px rgba(41, 98, 255, 0.2);
-    transition: 0.1s ease;
+
+::placeholder {
+    font-weight: 400;
+    color: #222;
 }
-.Signup_page button {
+
+.forgot {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    font-size: 14px;
+    color: #121212;
+}
+.forgot a {
+    color: black;
+}
+
+section {
+    display: flex;
+    align-items: center;
+}
+
+#check {
+    margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section a {
+    color: #555;
+}
+
+.input-submit {
+    position: relative;
+}
+
+.submit-btn {
     width: 100%;
-    padding: 10px;
+    height: 60px;
+    background: black;
     border: none;
-    border-radius: 20px;
-    background-color: #8b5cf6;
-    color: #ffffff;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #000;
+    transform: scale(1.05);
+}
+
+.input-submit label {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin: 20px 0;
-    box-shadow: 0 4px 15px rgba(41, 98, 255, 0.3);
-
-}
-.Signup_page button:hover {
-    transform: translateY(-2px);
-    transition: 0.1s ease-in-out;
-}
-button:active {
-    background-color: #6444ae;
-}
-.Signup_page input[type="password"] {
-    margin-bottom: 10px;
-}
-.Signup_page p{
-    margin-top: -5px;
-    font-size: 14px;
-    color: #000000;
-}
-.Signup_page label{
-    font-size: 14px;
-    color: #797777;
-    font-weight: 600;;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: flex-start;
 }
 
+.sign-up-link {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 20px;
+}
 
-
-
+.sign-up-link a {
+    color: #000;
+    font-weight: 600;
+}

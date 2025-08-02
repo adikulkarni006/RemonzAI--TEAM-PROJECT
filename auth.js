@@ -1,6 +1,5 @@
 console.log("✅ JS connected");
 
-
 // SIGNUP
 const signupForm = document.getElementById('signupForm');
 if (signupForm) {
@@ -43,13 +42,13 @@ if (loginForm) {
 
 // LOGOUT FUNCTION (use this in nav)
 function logout() {
-  localStorage.removeItem('loggedIn');
-  window.location.href = "login.html";
+    localStorage.removeItem('loggedIn');
+    window.location.href = "login.html";
 }
 
 // PROTECT main.html
 if (window.location.pathname.includes('index.html') && localStorage.getItem('loggedIn') !== 'true') {
-  window.location.href = "login.html";
+    window.location.href = "login.html";
 }
 
 // Add this new function to handle navigation
