@@ -151,7 +151,7 @@ h2#animatedTitle {
 }
 
 .main-header {
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
@@ -208,9 +208,21 @@ h2#animatedTitle {
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-    width: 250px;
+    width: 170px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(41, 98, 255, 0.3);
+}
+
+form#queryForm button {
+    width: 300px;
+}
+
+div.response-feedback button {
+    width: 300px;
+}
+
+div.response-feedback span {
+    font-size: larger;
 }
 
 .form-container button:hover {
@@ -238,7 +250,7 @@ h2#animatedTitle {
 
 .response-feedback {
     margin-top: 10px;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     gap: 10px;
     font-size: 14px;
@@ -545,7 +557,7 @@ h2#animatedTitle {
 
 /* GIRIJA'S WORK  */
 .login-page {
-    background-color: #fefcbf;
+    background-color: #e3e3e3;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -555,12 +567,12 @@ h2#animatedTitle {
     font-family: Arial, sans-serif;
 }
 .login-container {
-    background: #5f59f7;
+    background: #ffffff;
     padding: 70px;
     border-radius: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     height: 70vh;
 }
 
@@ -600,7 +612,8 @@ h2#animatedTitle {
     color: #121212;
 }
 .forgot a {
-    color: black;
+    color: #5f59f7;
+;
 }
 
 section {
@@ -631,7 +644,7 @@ section a {
 .submit-btn {
     width: 100%;
     height: 60px;
-    background: black;
+    background: #5f59f7;
     border: none;
     border-radius: 30px;
     cursor: pointer;
@@ -659,6 +672,5 @@ section a {
 }
 
 .sign-up-link a {
-    color: #000;
     font-weight: 600;
 }
