@@ -1,9 +1,8 @@
 *{
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
 }
-/* GIRIJA'S WORK  */
+
 .login-page {
     background-color: #e3e3e3;
     margin: 0;
@@ -106,7 +105,7 @@ section a {
 }
 
 .submit-btn:hover {
-     background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
     transform: scale(1.03);
     transition: all 0.1s ease;
     font-size: 18px;

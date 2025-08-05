@@ -50,12 +50,6 @@ function logout() {
     window.location.href = "login.html";
 }
 
-// PROTECT main.html
-// if (window.location.pathname.includes('index.html') && localStorage.getItem('loggedIn') !== 'true') {
-//     window.location.href = "login.html";
-//}
-
-// Add this new function to handle navigation
 function navigateToSignup() {
     window.location.href = "signup.html";
 }

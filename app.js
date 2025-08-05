@@ -1,4 +1,4 @@
-// console.log("Project started successfully 🚀");
+// console.log("Project started successfully");
 // console.log("lets start");
 
 // const form = document.getElementById('queryForm');
@@ -27,7 +27,6 @@
 // });
 
 
-// UPDATED JS 
 // DOM Elements
 const queryForm = document.getElementById('queryForm');
 const titleInput = document.getElementById('title');
@@ -390,11 +389,6 @@ function loadRecentQueries() {
         { title: 'Library book renewal process', category: 'Library', date: 'Yesterday' },
         { title: 'Technical support for portal', category: 'Technical', date: '2 days ago' }
     ];
-    
-    // You can uncomment this if you want to dynamically load queries
-    // sampleQueries.forEach(query => {
-    //     addToRecentQueries(query.title, query.category);
-    // });
 }
 
 // Show notification
@@ -796,7 +790,6 @@ allQueries.forEach(card => {
     card.style.display = (!value || category === value) ? "block" : "none";
 });
 });
-
 
 const timestamp = new Date().toLocaleString();
 query.timestamp = timestamp;
