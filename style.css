@@ -24,7 +24,28 @@ body {
     font-size: 35px;
     cursor: pointer;
 }
+.bell-icon {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    font-size: 40px;
+    cursor: pointer;
+    color: #6366f1;
+    z-index: 1100;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+.bell-icon:hover {
+    color: #8b5cf6;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+.bell-icon:active{
+    transform: scale(1);
+    background-color: #fbf8f817;
+    transition: transform 0.1s ease;
 
+}
 
 .sidebar {
     width: 250px;
@@ -113,7 +134,7 @@ body {
     right: 20px;
     border-top: 1px solid #e2e8f0;
     padding-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 2px;
 }
 
 /* Responsive Styles */
@@ -533,6 +554,23 @@ div.response-feedback span {
         width: 0ch;
     }
 }
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.icon-button:hover {
+    background: rgba(0, 0, 0, 0.06);
+}
+#feedback-status {
+    font-size: 20px;
+    margin: 10px;
+    color: #4caf50; /* Green color for success */
+}
 
 .toast {
     visibility: hidden;
@@ -555,27 +593,9 @@ div.response-feedback span {
     opacity: 1;
 }
 
-/* GIRIJA'S WORK  */
-.login-page {
-    background-color: #e3e3e3;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-}
-.login-container {
-    background: #ffffff;
-    padding: 70px;
-    border-radius: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
-    height: 70vh;
-}
+/* new css file ko form.css me likho ya fir apne hisab se file bana lo agar new page hua toh  */
 
+<<<<<<< HEAD
 .login-header {
     text-align: center;
     margin: 20px 0 40px 0;
@@ -710,3 +730,5 @@ a.nav-link {
     align-items: flex-start
 }
 
+=======
+>>>>>>> 6a0291040a7cceaeda56c9cef66600ff6912691f
