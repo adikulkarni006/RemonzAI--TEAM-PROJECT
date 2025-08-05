@@ -1,4 +1,8 @@
-
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
 /* GIRIJA'S WORK  */
 .login-page {
     background-color: #e3e3e3;
@@ -17,13 +21,14 @@
     border-radius: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
     height: 60vh;
 }
 
 .login-header {
     text-align: center;
-    margin: 20px 0 40px 0;
+    margin-bottom: 60px;
+
 }
 
 .login-header header {
@@ -144,7 +149,11 @@ h1{
     font-size: 30px;
     font-weight: 600;
     color: #414141;
-    margin-top: 30px;
+    /* margin-top: 30px;     */
+    position: absolute;
+    top: 30px;
+    left: 50%;      
+    transform: translateX(-50%);
 }
 .signup-body{
     background-color: #f0f0f0;
@@ -161,7 +170,7 @@ h1{
     border-radius: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
     height: 60vh;
     position: absolute;
     top: 50%;
