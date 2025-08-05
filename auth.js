@@ -1,5 +1,3 @@
-console.log("✅ JS connected");
-
 // SIGNUP
 const signupForm = document.getElementById('signupForm');
 if (signupForm) {
@@ -7,11 +5,17 @@ if (signupForm) {
     e.preventDefault();
 
     const username = document.getElementById('signup-username').value;
-    const password = document.getElementById('signup-password').value;
+    const password = document.getElementById('create-password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
 
     // Basic validation
-        if (!username || !password) {
+        if (!username || !password || !confirmPassword) {
             alert("Please fill in all fields");
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            alert("Passwords do not match");
             return;
         }
 

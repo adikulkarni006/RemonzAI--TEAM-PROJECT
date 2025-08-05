@@ -76,13 +76,16 @@
         </div>
 <!-- CONTAINER.NO-1  -->
         <div class="form-container">
+                    <input type="text" id="searchQuery" placeholder="🔍 Search your queries...">
             <h1>Ask a Query 👨‍💻</h1>
             <form id="queryForm">
-                <input type="text" id="title" placeholder="Enter your query title" required />
+                <input type="text" id="title" placeholder="Enter your query title" required /> 
                 <select id="category">
                     <option value="Academic">📚 Academic</option>
                     <option value="Exam">📅 Exam</option>
                     <option value="Technical">💻 Technical</option>
+                    <option value="Fees">💰 Fees</option>
+                    <option value="Syllabus">📄 Syllabus</option>
                     <option value="Library">📖 Library</option>
                     <option value="Career">🎯 Career</option>
                     <option value="General">❓General</option>
@@ -93,6 +96,7 @@
                 <input type="file" id="file-upload" /><p id="file-name">No file chosen</p>
                 </div>
                 <button type="submit">Submit Query ╰⪼</button>
+                <p class="timestamp">🕒 <span>${query.timestamp}</span></p>
             </form>
         </div>
 <!-- CONTAINER.NO-2  -->
@@ -108,7 +112,6 @@
                 <span>Was this helpful?</span>
                 <br><br>
                 <div id="feedback-status" style="color: green;"></div>
-
                 <button class="icon-button" title="Helpful"><span class="material-symbols-outlined">thumb_up</span></button>      <button class="icon-button" title="Not Helpful"><span class="material-symbols-outlined">thumb_down</span></button>
                 <br><br>    <button onclick="downloadResponse()">📥 Download Response</button>
             </div>
@@ -116,6 +119,7 @@
 <!-- CONTAINER.NO-3  -->
         <div class="dashboard">
             <h2>Recent Queries</h2>
+            <div class="query-card"></div>
             <div class="queries">
                 <h3>How to prepare for final exams?</h3>
                 <button onclick="viewQuery(1)">View Details</button>
@@ -128,7 +132,11 @@
                 <h3>Technical support for portal</h3>
                 <button onclick="viewQuery(3)">View Details</button>
             </div>
+            <!-- In recent queries list -->
+                <span class="status-badge pending">⏳ Pending</span>
+                <span class="status-badge answered">✅ Answered</span>
         </div>
+    </div>
     </div>
 <!-- TOAST  -->
         <div id="toast" class="toast">Query Submitted Successfully!</div>

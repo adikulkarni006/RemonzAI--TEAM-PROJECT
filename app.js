@@ -164,18 +164,21 @@ function resetForm() {
 }
 
 // Add to recent queries
-function addToRecentQueries(title, category) {
+const query = { title, category, description, timestamp: new Date().toLocaleString() };
+addToRecentQueries(query.title, query.category, query.timestamp);
+
+function addToRecentQueries(title, category, timestamp) {
     const dashboard = document.querySelector('.dashboard');
     const newQuery = document.createElement('div');
     newQuery.className = 'queries';
     newQuery.innerHTML = `
         <div>
             <h3>${title}</h3>
+            <p class="timestamp">🕒 <span>${timestamp}</span></p>
             <small style="color: #64748b; font-size: 12px;">${category} • Just now</small>
         </div>
-        <button onclick="viewQuery('${title}', '${category}')">View Details</button>
+        <button onclick="viewQuery('${title}', '${category}', '${timestamp}')">View Details</button>
     `;
-    
     // Insert at the beginning (after the h2)
     const firstQuery = dashboard.querySelector('.queries');
     if (firstQuery) {
@@ -201,18 +204,17 @@ function addToRecentQueries(title, category) {
 }
 
 // View query details
-function viewQuery(title, category = 'General') {
-    const modal = createModal(title, category);
+function viewQuery(title, category = 'General', timestamp = '') {
+    const modal = createModal(title, category, timestamp);
     document.body.appendChild(modal);
     
-    // Show modal with animation
     setTimeout(() => {
         modal.classList.add('show');
     }, 10);
 }
 
 // Create modal for query details
-function createModal(title, category) {
+function createModal(title, category, timestamp) {
     const modal = document.createElement('div');
     modal.className = 'modal-overlay';
     modal.innerHTML = `
@@ -224,7 +226,7 @@ function createModal(title, category) {
             <div class="modal-body">
                 <p><strong>Category:</strong> ${category}</p>
                 <p><strong>Status:</strong> <span class="status-badge">Answered</span></p>
-                <p><strong>Submitted:</strong> ${new Date().toLocaleDateString()}</p>
+                <p><strong>Submitted:</strong> ${timestamp}</p>
                 <p><strong>Description:</strong> This query was submitted through the student portal and has been processed by our AI system.</p>
             </div>
             <div class="modal-footer">
@@ -773,3 +775,28 @@ window.onload = type;
 function toggleSidebar() {
     document.getElementById("sidebar").classList.toggle("active");
 }
+
+// Seaarch Logic 
+document.getElementById("searchQuery").addEventListener("input", function () {
+    const value = this.value.toLowerCase();
+    const allQueries = document.querySelectorAll(".query-card");
+
+allQueries.forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(value) ? "block" : "none";
+});
+});
+
+document.getElementById("category").addEventListener("change", function () {
+    const value = this.value;
+    const allQueries = document.querySelectorAll(".query-card");
+
+allQueries.forEach(card => {
+    const category = card.getAttribute("data-category");
+    card.style.display = (!value || category === value) ? "block" : "none";
+});
+});
+
+
+const timestamp = new Date().toLocaleString();
+query.timestamp = timestamp;
