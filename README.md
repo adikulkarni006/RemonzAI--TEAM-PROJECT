@@ -38,4 +38,4 @@ cd MERN-TEAM-PROJECT
 
 👤 @codeXsamarth (Bugs)
 
-👤 @KalpanaUjad (Bugs)
+👤 @KalpanaUjad (Backend)
