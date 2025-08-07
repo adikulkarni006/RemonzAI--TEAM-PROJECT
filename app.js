@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Initialize application
 function initializeApp() {
-    console.log('Student Query Portal initialized');
+    // console.log('Student Query Portal initialized');
     loadRecentQueries();
     setupMobileResponsive();
 }
@@ -96,7 +96,7 @@ async function handleFormSubmit(e) {
         resetForm();
         
     } catch (error) {
-        console.error('Error submitting query:', error);
+        // console.error('Error submitting query:', error);
         showNotification('Error submitting query. Please try again.', 'error');
         hideLoadingState();
     }
@@ -115,7 +115,14 @@ function simulateAIResponse(title, category, description) {
                 
                 'Technical': `Technical Support Response: "${title}"\n\nFor your technical issue:\n\n${description}\n\nTroubleshooting steps:\n\n1. Try refreshing the page or clearing browser cache\n2. Check your internet connection\n3. Ensure your browser is up to date\n4. Try accessing from a different device\n5. Contact IT support if the issue persists\n\nTechnical support hours: Mon-Fri 9AM-5PM\nEmail: support@university.edu\nPhone: +1-234-567-8900`,
                 
-                'Academic': `Academic Query Response: "${title}"\n\nRegarding your academic question:\n\n${description}\n\nAcademic guidance:\n\n• Consult with your academic advisor\n• Review the course syllabus and requirements\n• Utilize office hours for direct faculty interaction\n• Consider forming study groups with classmates\n• Access tutoring services if available\n\nFor specific academic policies, refer to the student handbook or contact the registrar's office.\n\nWould you like information about specific academic resources?`
+                'Academic': `Academic Query Response: "${title}"\n\nRegarding your academic question:\n\n${description}\n\nAcademic guidance:\n\n• Consult with your academic advisor\n• Review the course syllabus and requirements\n• Utilize office hours for direct faculty interaction\n• Consider forming study groups with classmates\n• Access tutoring services if available\n\nFor specific academic policies, refer to the student handbook or contact the registrar's office.\n\nWould you like information about specific academic resources?`,
+
+                'Fees': `Fees Related Query: "${title}"\n\n${description}\n\nHere’s what you can check:\n\n• Check fee payment deadlines\n• Visit the finance office for clarification\n• Use online portal for fee status\n• Email: fees@university.edu\n\nNeed help with a specific fee component?`,
+
+                'Syllabus': `Syllabus Query: "${title}"\n\n${description}\n\nTo view or download syllabus:\n\n• Visit your course portal\n• Contact the department head\n• Ask faculty directly for recent updates\n• Check for any curriculum changes for this semester`,
+
+                'Career': `Career Guidance: "${title}"\n\n${description}\n\nHere are steps you can take:\n\n• Visit the placement cell\n• Attend career counseling sessions\n• Improve LinkedIn/resume\n• Apply for internships\n• Explore job fairs or seminars\n\nWould you like tips for a specific field or role?`
+
             };
             
             resolve(responses[category] || responses['General']);
@@ -333,8 +340,11 @@ function handleNavigation(section) {
         case 'Help':
             showNotification('Help: Use the form above to submit your queries. Our AI will respond shortly!', 'info');
             break;
-        case 'Sign Out':
-            handleSignOut();
+        case 'Login':
+            handleLogin();
+            break;
+        case 'signup':
+            handleSignup();
             break;
     }
 }
@@ -349,13 +359,13 @@ function scrollToSection(selector) {
 
 // Handle sign out
 function handleSignOut() {
-    if (confirm('Are you sure you want to sign out?')) {
-        showNotification('Signing out...', 'info');
+    if (confirm('Are you sure you want to Log out?')) {
+        showNotification('Log out...', 'info');
         setTimeout(() => {
-            window.location.href = 'sign.html';
+            window.location.href = 'login.html';
         }, 1500);
     }
-}
+}    
 
 // Setup mobile responsive behavior
 function setupMobileResponsive() {
