@@ -106,13 +106,14 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 12px 15px;
+    padding: 12px;
     text-decoration: none;
-    color: #6366f1;;
+    color: #6366f1;
     font-weight: 500;
     border-radius: 10px;
     transition: all 0.3s ease;
-    margin-bottom: 1rem;
+    margin: 0.5rem;
+    position: relative; /* Add this */
 }
 
 .nav-item .nav-link:hover {
@@ -120,9 +121,9 @@ body {
     color: white;
     transform: translateX(5px);
     box-shadow: 0 4px 15px rgba(41, 98, 255, 0.3);
-    margin-top: 8px;
+    /* Remove margin-top to prevent shifting */
+    z-index: 1; /* Add this to ensure hover item stays on top */
 }
-
 .nav-item .nav-link .material-symbols-outlined {
     font-size: 30px;
 }
@@ -519,11 +520,17 @@ div.response-feedback span {
 }
 
 /* DARK THEME  */
-    .theme-wrapper:hover {
+.theme-wrapper {
     display: flex;
     justify-content: center;
     width: 100%;
     margin-top: 10px;
+    position: relative; /* Add this */
+}
+
+.theme-wrapper:hover {
+    transform: translateY(-2px); /* Add subtle hover effect */
+    transition: transform 0.3s ease;
 }
 
     #theme-toggle {
