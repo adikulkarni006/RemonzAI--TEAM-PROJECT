@@ -10,7 +10,7 @@ body {
     background-color: #f5f5f5;
     text-align: center;
     padding-top: 50px;
-    padding: 5px;
+    padding: 15px;
 }
 
 .hamburger {
@@ -76,8 +76,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 30px;
-    padding: 15px;
+    margin-bottom: 28px;
+    padding: 10px;
     background: linear-gradient(135deg,  #6366f1, #8b5cf6);
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(41, 98, 255, 0.3);
@@ -120,7 +120,7 @@ body {
 
 .nav-item .nav-link:hover {
     background: linear-gradient(135deg, #6366f1, #8b5cf6);
-    color: white;
+    color: rgb(255, 255, 255);
     transform: translateX(5px);
     box-shadow: 0 4px 15px rgba(41, 98, 255, 0.3);
     /* Remove margin-top to prevent shifting */
@@ -132,12 +132,12 @@ body {
 
 .secondary-nav {
     position: relative;
-    bottom: 20px;
+    bottom: 5px;
     left: 3px;
     right: 20px;
-    border-top: 1px solid #e2e8f0;
+    border-top: 2px solid #8a5ff9;
     padding-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
 }
 
 /* Responsive Styles */
@@ -185,18 +185,19 @@ h2#animatedTitle {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 20px;
-    padding: 30px;
-    max-width: 700px;
-    /* margin: 0 auto 30px; */
-    margin: 0 0 30px 550px;
+    padding: 50px;
+    max-width: 900px;
+    margin: 0 0 30px 450px;
+    border-radius: 50px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .form-container h1 {
-    font-size: 28px;
+    font-size: 38px;
     font-weight: 600;
     margin-bottom: 25px;
+    margin-top: 20px;
     color: #1e293b;
     text-align: center;
 }
@@ -209,11 +210,13 @@ h2#animatedTitle {
     padding: 15px;
     font-size: 16px;
     border: 2px solid #e2e8f0;
-    border-radius: 12px;
+    border-radius: 50px;
     outline: none;
     transition: all 0.5s ease;
     background: rgba(255, 255, 255, 0.8);
 }
+
+/* focus effect  */
 
 .form-container input:focus,
 .form-container select:focus,
@@ -223,6 +226,7 @@ h2#animatedTitle {
     transform: translateY(-2px);
 }
 
+/* hover effect  */
 
 .form-container input:hover,
 .form-container select:hover,
@@ -276,7 +280,6 @@ div.response-feedback span {
     height: 8.6rem;
     border-radius: 20px;
     border: 2px solid rgba(53, 52, 52, 0.322);
-    /* border: 1px solid rgba(255, 255, 255, 0.229); */
     background-color: rgba(255, 255, 255, 0.015);
     margin-bottom: 1rem;
     transition: all 0.5s ease;
@@ -329,18 +332,6 @@ div.response-feedback span {
     font-size: 14px;
 }
 
-.dashboard {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 30px;
-    max-width: 700px;
-    /* margin: 0 auto; */
-    margin: 0 0 30px 550px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
 .dashboard h2 {
     font-size: 24px;
     font-weight: 600;
@@ -352,8 +343,8 @@ div.response-feedback span {
 
 .queries {
     background: rgba(255, 255, 255, 0.5);
-    border-radius: 15px;
-    padding: 20px;
+    border-radius: 35px;
+    padding: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -399,13 +390,13 @@ div.response-feedback span {
     animation: loading 1.5s infinite;
 }
 #theme-toggle:hover{
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 15px rgb(51, 0, 255, 0.5);
     }
 #theme-toggle:active {
     transform: translateY(-3px);
     background-color: #6366f1;
     transform: scale(0.92);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgb(255, 0, 0, 0.2);
     transition: all 0.2s ease;
 }
 
@@ -446,7 +437,7 @@ div.response-feedback span {
 
     .sidebar:hover {
         width: 260px;
-        padding: 20px;
+        padding: 15px;
     }
 
     .nav-label {
@@ -480,15 +471,19 @@ div.response-feedback span {
         padding: 20px;
     }
     #theme-toggle:hover{
-        background-color: #babcc0;
+        background-color: transparent;
         color: #1e293b;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 20px rgba(135, 98, 255, 0.068);
+        transition: all 0.2s ease;
+        outline: none;
     }
     .form-container {
         margin: 0 auto 30px;
     }
+    .bell-icon{
+        display: none;
+    }
 }
-
 @media (max-width: 480px) {
     .sidebar {
         width: 60px;
@@ -529,6 +524,12 @@ div.response-feedback span {
     .bell{
         display: none;
     }
+    .bell-icon {
+        cursor: pointer;
+        color: #6366f1;
+        z-index: 1100;
+        display: none;
+    }
 }
 
 /* DARK THEME  */
@@ -546,12 +547,12 @@ div.response-feedback span {
 }
 
     #theme-toggle {
-        border-radius: 20px;
+        border-radius: 25px;
         font-weight: bold;
         padding: 10px 30px;
         margin-left: 0 auto;
         max-width: 90%;
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .dark-mode {
@@ -692,6 +693,8 @@ div.response-feedback span {
     color: white;
     margin-right: 5px;
     cursor: pointer;
+    border-radius: 30px;
+    padding: 10px 15px;
 }
 .pending:hover {
     background: #1e40af;
@@ -703,6 +706,8 @@ div.response-feedback span {
 .answered {
     background: #059669;
     color: white;
+     border-radius: 30px;
+    padding: 10px 15px;
 }
 .answered:hover {
     background: #047857;
@@ -730,4 +735,43 @@ div.response-feedback span {
 }
 #searchQuery:active{
     transform: scale(0.98);
+}
+.help-box{
+    background-color: #0000003e;
+    width: 100%;
+    height: 150px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 10px;
+    border-radius: 30px;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid #535151;
+}
+.help-box span{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 15px;
+}
+.help-box span a{
+    color: #6366f1;
+    text-decoration: underline;
+    transition: color 0.2s;
+    text-decoration: none;
+    }
+
+.help-box span a:hover {
+        color: #8b5cf6;
+        text-decoration: none;
+}
+.help-box span a:active{
+    transform: translateY(+2px);
+}
+.ext{
+    margin-top: 10px;
 }
