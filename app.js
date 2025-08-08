@@ -729,7 +729,7 @@ if ('serviceWorker' in navigator) {
                 console.log('ServiceWorker registration successful');
             })
             .catch(function(err) {
-                console.log('ServiceWorker registration failed');
+                console.log('ServiceWorker registration failed', err);
             });
     });
 }
