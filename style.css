@@ -69,7 +69,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    /* justify-content: space-between; */
+    justify-content: space-between; 
 }
 
 .logo {
@@ -131,13 +131,13 @@ body {
 }
 
 .secondary-nav {
-    position: absolute;
+    position: relative;
     bottom: 20px;
-    left: 20px;
+    left: 3px;
     right: 20px;
     border-top: 1px solid #e2e8f0;
     padding-top: 20px;
-    margin-bottom: 2px;
+    margin-bottom: 10px;
 }
 
 /* Responsive Styles */
