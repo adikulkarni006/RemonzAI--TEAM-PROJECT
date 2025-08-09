@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 })
 
 // Simple test route
-app.get('/', (req, res) => {
+app.get('/test', (req, res) => {
     console.log('🌟 Basic test route hit');
   res.json({ 
     message: '🚀 RemonzAi Backend is running!',
