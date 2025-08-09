@@ -10,7 +10,6 @@ This is a team-driven effort to build a full-stack web application from scratch.
 
 - **MongoDB** (Database)
 - **Express.js** (Backend framework)
-<!-- - **React.js** (Frontend library) -->
 - **Node.js** (Runtime)
 
 ---
@@ -24,16 +23,32 @@ A smart AI-powered student query resolution OpenAI integration system where stud
 git clone https://github.com/adikulkarni006/MERN-TEAM-PROJECT.git
 cd MERN-TEAM-PROJECT
 
-------
+---------------
 👥 Contributors
 👨‍💻 @adikulkarni006 (Project Lead)
 
-👤 @Nissh01 (Backend)
+---------------
 
 👤 @ritesh5585 (Frontend)
 
-👤 @tanushka1726 (Backend)
+👤 @PARTH-TUSSLE (Frontend)
 
-👤 @gourijadhav06 (Testing)
+👤 @ChiragJadhav338 (Frontend)
 
-👤 @codeXsamarth (Bugs)
+👤 @KalpanaUjad (Frontend)
+
+---------------
+
+👤 @Nissh01 (Backend)
+
+👤 @VishuMahla (Backend)
+
+👤 @roshan-vp (Backend)
+
+👤 @mr-coder90 (Backend)
+
+---------------
+
+👤 @gourijadhav06 (Testing/Bugs)
+
+👤 @codeXsamarth (Testing/Bugs)
