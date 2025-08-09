@@ -21,3 +21,20 @@ toggleBtn.addEventListener("click", () => {
     }
 });
 });
+
+
+// PROJECT NAME - animated
+const text = "RemonzAi!";
+let index = 0;
+function type() {
+    if (index < text.length) {
+        document.getElementById("animatedTitle").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, 100);
+    }
+}
+window.onload = type;
+
+function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("active");
+}

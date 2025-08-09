@@ -325,6 +325,16 @@ function setupSidebarEvents() {
     });
 }
 
+// Handle login navigation
+function handleLogin() {
+    window.location.href = '/login';
+}
+
+// Handle signup navigation
+function handleSignup() {
+    window.location.href = '/signup';
+}
+
 // Handle navigation
 function handleNavigation(section) {
     switch(section) {
@@ -343,11 +353,14 @@ function handleNavigation(section) {
         case 'Login':
             handleLogin();
             break;
-        case 'signup':
+        case 'Signup':
             handleSignup();
             break;
     }
 }
+
+
+
 
 // Scroll to section
 function scrollToSection(selector) {
@@ -712,7 +725,7 @@ const performance = {
 
 // Error handling
 window.addEventListener('error', function(e) {
-    console.error('JavaScript Error:', e.error);
+    console.error('JavaScript Error:', e.reason);
     showNotification('Something went wrong. Please refresh the page.', 'error');
 });
 
@@ -722,17 +735,17 @@ window.addEventListener('unhandledrejection', function(e) {
 });
 
 // Service Worker registration (for future PWA enhancement)
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js')
-            .then(function(registration) {
-                console.log('ServiceWorker registration successful');
-            })
-            .catch(function(err) {
-                console.log('ServiceWorker registration failed');
-            });
-    });
-}
+// if ('serviceWorker' in navigator) {
+//     window.addEventListener('load', function() {
+//         navigator.serviceWorker.register('/sw.js')
+//             .then(function(registration) {
+//                 console.log('ServiceWorker registration successful');
+//             })
+//             .catch(function(err) {
+//                 console.log('ServiceWorker registration failed');
+//             });
+//     });
+// }
 
 // TOAST QUERY SUBMIT
 function showToast() {
@@ -764,21 +777,21 @@ document.getElementById('file-upload').addEventListener('change', function() {
     document.getElementById('file-name').textContent = fileName;
 });
 
-// PROJECT NAME 
-const text = "RemonzAi!";
-let index = 0;
-function type() {
-    if (index < text.length) {
-        document.getElementById("animatedTitle").innerHTML += text.charAt(index);
-        index++;
-        setTimeout(type, 100);
-    }
-}
-window.onload = type;
+// // PROJECT NAME 
+// const text = "RemonzAi!";
+// let index = 0;
+// function type() {
+//     if (index < text.length) {
+//         document.getElementById("animatedTitle").innerHTML += text.charAt(index);
+//         index++;
+//         setTimeout(type, 100);
+//     }
+// }
+// window.onload = type;
 
-function toggleSidebar() {
-    document.getElementById("sidebar").classList.toggle("active");
-}
+// function toggleSidebar() {
+//     document.getElementById("sidebar").classList.toggle("active");
+// }
 
 // Seaarch Logic 
 document.getElementById("searchQuery").addEventListener("input", function () {
@@ -802,4 +815,5 @@ allQueries.forEach(card => {
 });
 
 const timestamp = new Date().toLocaleString();
-query.timestamp = timestamp;
+query.timestamp = timestamp; 
+

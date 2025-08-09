@@ -10,15 +10,17 @@
 <body class="signup-body">
   <div class="signup_page">
           <h1>Sign up 👤</h1>
-    <form id="signupForm">
-      <label for="">Create username</label>
-      <input type="text" id="signup-username" placeholder="Username" required />
+    <form id="signupForm" method="post" action="/signup">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="you@example.com" required />
 
-      <label for="">Create Password</label>
-      <input type="password" id="create-password" placeholder="Create Password" required />
+      <label for="signup-username">Create username</label>
+      <input type="text" name="username" id="signup-username" placeholder="Username" required />
 
-      <label for="">Confirm Password</label>
-      <input type="password" id="confirm-password" placeholder="Confirm Password" required />
+      <label for="create-password">Create Password</label>
+      <input type="password" name="password" id="create-password" placeholder="Create Password" required />
+
+      
       
       <div class="sign-up-link">
         <button type="submit" class="submit-btn">Sign Up →</button>
