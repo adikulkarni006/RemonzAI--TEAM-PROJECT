@@ -81,6 +81,7 @@ body {
     background: linear-gradient(135deg,  #6366f1, #8b5cf6);
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(41, 98, 255, 0.3);
+    margin-top: 40%;
 }
 
 .logo img {
@@ -148,10 +149,15 @@ body {
 
     .sidebar.active {
         transform: translateX(0);
+        width: 150px;
     }
 
     .hamburger {
         display: block;
+    }
+
+    .sidebar-nav {
+        display: contents;
     }
 }
 
@@ -191,6 +197,7 @@ h2#animatedTitle {
     border-radius: 50px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    border-block-color: #6366f1;
 }
 
 .form-container h1 {
