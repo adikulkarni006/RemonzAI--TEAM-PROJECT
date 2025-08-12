@@ -21,9 +21,41 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 450px;
-    height: 60vh;
+    /* height: 60vh; */
 }
-
+/* added  response in login page */
+@media (max-width: 600px) {
+    .login-container{
+        padding: 40px; 
+        max-width: 90%; 
+        border-radius: 40px;
+        margin: 10px;
+    }
+    .sign-up-link p {
+        font-size: 12px;
+    }
+    .sign-up-link a {
+        font-size: 15px;
+         white-space: nowrap; 
+    }
+    .input-box{
+        max-width: 90%;
+    }
+     #submit{
+        font-size: 18px;
+    } 
+    .forgot section label{
+        font-size: 15px;
+    }
+    .forgot section a{
+        font-size: 12px;
+    } 
+    .sign-up-link{
+        justify-content: center;
+        gap: 10px;
+      }
+    
+}
 .login-header {
     text-align: center;
     margin-bottom: 60px;
@@ -130,14 +162,20 @@ input{
     box-shadow: 0 4px 15px rgba(41, 98, 255, 0.3);
 }
 
+#signupBtn {
+    cursor: pointer;
+}
+
 .sign-up-link {
     text-align: center;
     font-size: 15px;
     margin-top: 10px;
     display: flex;
     flex-direction: row;
-    gap: 180px;
+    gap: 10px;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .sign-up-link a {
@@ -170,7 +208,8 @@ h1{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 450px;
-    height: 60vh;
+    /* height: 60vh; */
+    height: auto;
     position: absolute;
     top: 50%;
     left: 50%;  
@@ -180,8 +219,6 @@ h1{
     background-color: #fff;
     margin-top: 10px;
     width: 100%;
-    height: 40px;
-    width: 100%;
     height: 60px;
     font-size: 17px;
     padding: 0 15px;
@@ -190,23 +227,40 @@ h1{
     border: none;
     box-shadow: 0 4px 15px rgba(41, 98, 255, 0.3);
     outline: none;
-
 }
+
 #signupForm input:active {
     transform: translateY(-2px);
     transition: all 0.1s ease;
 }
-label{
+
+label {
     padding: 1px;
     font-size: 20px;
-    margin: 10px ;
+    margin: 10px;
     color: #313131;
 }
+
 ::placeholder {
     font-weight: 400;
     color: #9a9999;
 }
-p{
+
+p {
     font-size: 15px;
     color: #313131;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .signup_page {
+        padding: 40px;
+        border-radius: 30px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    label {
+        font-size: 18px;
+    }
 }
