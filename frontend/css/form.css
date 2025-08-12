@@ -36,12 +36,12 @@
     }
     .sign-up-link a {
         font-size: 15px;
-         white-space: nowrap; 
+        white-space: nowrap; 
     }
     .input-box{
         max-width: 90%;
     }
-     #submit{
+    #submit{
         font-size: 18px;
     } 
     .forgot section label{
@@ -53,8 +53,7 @@
     .sign-up-link{
         justify-content: center;
         gap: 10px;
-      }
-    
+}  
 }
 .login-header {
     text-align: center;
@@ -205,8 +204,8 @@ h1{
     border-radius: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 450px;
-    height: 60vh;
+    max-width: 500px;
+    height: auto; 
     position: absolute;
     top: 50%;
     left: 50%;  
@@ -245,4 +244,30 @@ label{
 p{
     font-size: 15px;
     color: #313131;
+}
+
+/* signup page responsive styling */
+@media (max-width: 600px) {
+    .signup_page {
+        padding: 40px;
+        max-width: 90%;
+        border-radius: 40px;
+        margin: 10px;
+        height: auto;
+    }
+    #signupForm input {
+        max-width: 90%;
+        font-size: 16px;
+    }
+    label {
+        font-size: 16px;
+        margin: 8px;
+    }
+    h1 {
+        font-size: 22px;
+        top: 20px;
+    }
+    p {
+        font-size: 12px;
+    }
 }
