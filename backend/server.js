@@ -144,10 +144,10 @@ app.use((req, res) => {
 
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server is running on port ${PORT}`);
-  console.log(`🎉 RemonzAi Backend running on port ${PORT}`);
-  console.log(`📍 Visit: http://localhost:${PORT}`);
-  console.log(`🏥 Health check: http://localhost:${PORT}/api/health`);
+  console.log(`Server is running on port ${PORT}`);
+  console.log(`RemonzAi Backend running on port ${PORT}`);
+  console.log(`Visit: http://localhost:${PORT}`);
+  console.log(`Health check: http://localhost:${PORT}/api/health`);
 });
 
 module.exports = app;
