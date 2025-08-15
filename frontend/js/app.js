@@ -349,10 +349,10 @@ function handleNavigation(section) {
             scrollToSection('.help-section');
             break;
         case 'Login':
-            handleLogin();
+            window.location.href= 'login.html';
             break;
         case 'Signup':
-            handleSignup();
+            window.location.href = 'signup.html';
             break;
     }
 }
@@ -805,7 +805,7 @@ document.getElementById('file-upload').addEventListener('change', function() {
 //     document.getElementById("sidebar").classList.toggle("active");
 // }
 
-// Seaarch Logic 
+// Search Logic 
 document.getElementById("searchQuery").addEventListener("input", function () {
     const value = this.value.toLowerCase();
     const allQueries = document.querySelectorAll(".query-card");
