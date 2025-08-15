@@ -1,5 +1,3 @@
-// console.log("Project started successfully");
-// console.log("lets start");
 
 // const form = document.getElementById('queryForm');
 
@@ -348,13 +346,13 @@ function handleNavigation(section) {
             showNotification('Settings page coming soon!', 'info');
             break;
         case 'Help':
-            showNotification('Help: Use the form above to submit your queries. Our AI will respond shortly!', 'info');
+            scrollToSection('.help-section');
             break;
         case 'Login':
-            handleLogin();
+            window.location.href= 'login.html';
             break;
         case 'Signup':
-            handleSignup();
+            window.location.href = 'signup.html';
             break;
     }
 }
@@ -371,14 +369,14 @@ function scrollToSection(selector) {
 }
 
 // Handle sign out
-function handleSignOut() {
-    if (confirm('Are you sure you want to Log out?')) {
-        showNotification('Log out...', 'info');
-        setTimeout(() => {
-            window.location.href = 'login.html';
-        }, 1500);
-    }
-}    
+// function handleSignOut() {
+//     if (confirm('Are you sure you want to Log out?')) {
+//         showNotification('Log out...', 'info');
+//         setTimeout(() => {
+//             window.location.href = 'login.html';
+//         }, 1500);
+//     }
+// }    
 
 // Setup mobile responsive behavior
 function setupMobileResponsive() {
@@ -735,7 +733,7 @@ window.addEventListener('unhandledrejection', function(e) {
 });
 
 // Service Worker registration (for future PWA enhancement)
-<<<<<<<< HEAD:frontend/js/app.js
+// <<<<<<<< HEAD:frontend/js/app.js  
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
         navigator.serviceWorker.register('/sw.js')
@@ -747,7 +745,7 @@ if ('serviceWorker' in navigator) {
             });
     });
 }
-========
+// ======== 
 // if ('serviceWorker' in navigator) {
 //     window.addEventListener('load', function() {
 //         navigator.serviceWorker.register('/sw.js')
@@ -759,7 +757,7 @@ if ('serviceWorker' in navigator) {
 //             });
 //     });
 // }
->>>>>>>> 7b792246c9410d2b04d787179248318384982c3b:backend/public/js/app.js
+// >>>>>>>> 7b792246c9410d2b04d787179248318384982c3b:backend/public/js/app.js
 
 // TOAST QUERY SUBMIT
 function showToast() {
@@ -807,7 +805,7 @@ document.getElementById('file-upload').addEventListener('change', function() {
 //     document.getElementById("sidebar").classList.toggle("active");
 // }
 
-// Seaarch Logic 
+// Search Logic 
 document.getElementById("searchQuery").addEventListener("input", function () {
     const value = this.value.toLowerCase();
     const allQueries = document.querySelectorAll(".query-card");
