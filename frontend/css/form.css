@@ -53,7 +53,8 @@
     .sign-up-link{
         justify-content: center;
         gap: 10px;
-}  
+    }
+    
 }
 .login-header {
     text-align: center;
@@ -178,17 +179,17 @@ input{
 .sign-up-link a {
     font-weight: 600;
 }
-/* signup page styling  */
+
 h1{
     font-size: 30px;
     font-weight: 600;
     color: #414141;
-    /* margin-top: 30px;     */
     position: absolute;
     top: 30px;
     left: 50%;      
     transform: translateX(-50%);
 }
+
 .signup-body{
     background-color: #f0f0f0;
 }
@@ -204,8 +205,8 @@ h1{
     border-radius: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 500px;
-    height: auto; 
+    max-width: 450px;
+    height: 60vh;
     position: absolute;
     top: 50%;
     left: 50%;  
@@ -214,9 +215,9 @@ h1{
 #signupForm input {
     background-color: #fff;
     margin-top: 10px;
-    width: 100%;
+    width: 80%;
     height: 40px;
-    width: 100%;
+    width: 95%;
     height: 60px;
     font-size: 17px;
     padding: 0 15px;
@@ -246,28 +247,54 @@ p{
     color: #313131;
 }
 
-/* signup page responsive styling */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .signup_page {
-        padding: 40px;
-        max-width: 90%;
+        padding: 30px;
+        max-width: 80%;
         border-radius: 40px;
+        height: 60vh;
         margin: 10px;
-        height: auto;
     }
-    #signupForm input {
-        max-width: 90%;
-        font-size: 16px;
+    h1 {
+        font-size: 34px;
+        top: 20px;
+        margin-bottom: 20px;
     }
     label {
         font-size: 16px;
         margin: 8px;
     }
-    h1 {
-        font-size: 22px;
-        top: 20px;
+    #signuForm input {
+        height: 45px;
+        font-size: 15px;
+        padding: 0 10px;
     }
     p {
-        font-size: 12px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 600px) {
+    .signup_page {
+        padding: 20px;
+        max-width: 80%;
+        border-radius: 25px;
+        gap: 5px;
+    }
+    h1 {
+        font-size: 28px;
+        top: 10px;
+    }
+    label {
+        font-size: 14px;
+        margin: 5px;
+    }
+    #signupForm input {
+        height: 40px;
+        font-size: 13px;
+        padding: 0 8px;
+    }
+    p {
+        font-size: 11px;
     }
 }

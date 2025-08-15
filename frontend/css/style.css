@@ -79,9 +79,8 @@ body {
     margin-bottom: 28px;
     padding: 10px;
     background: linear-gradient(135deg,  #6366f1, #8b5cf6);
-    border-radius: 15px;
+    border-radius: 30px;
     box-shadow: 0 4px 15px rgba(41, 98, 255, 0.3);
-    margin-top: 40%;
 }
 
 .logo img {
@@ -103,7 +102,7 @@ body {
     margin: 1rem 0;
     flex-direction: column;
     gap: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .nav-item .nav-link {
@@ -114,7 +113,7 @@ body {
     text-decoration: none;
     color: #6366f1;
     font-weight: 500;
-    border-radius: 10px;
+    border-radius: 30px;
     transition: all 0.3s ease;
     position: relative; /* Add this */
 }
@@ -149,15 +148,10 @@ body {
 
     .sidebar.active {
         transform: translateX(0);
-        width: 150px;
     }
 
     .hamburger {
         display: block;
-    }
-
-    .sidebar-nav {
-        display: contents;
     }
 }
 
@@ -197,7 +191,6 @@ h2#animatedTitle {
     border-radius: 50px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-block-color: #6366f1;
 }
 
 .form-container h1 {
@@ -224,7 +217,6 @@ h2#animatedTitle {
 }
 
 /* focus effect  */
-
 .form-container input:focus,
 .form-container select:focus,
 .form-container textarea:focus {
@@ -234,7 +226,6 @@ h2#animatedTitle {
 }
 
 /* hover effect  */
-
 .form-container input:hover,
 .form-container select:hover,
 .form-container textarea:hover {
@@ -293,7 +284,7 @@ div.response-feedback span {
 }
 
 .upload-box:hover {
-     border-color: #2962ff;
+    border-color: #2962ff;
     box-shadow: 0 0 0 3px rgba(41, 98, 255, 0.1);
 }
 
@@ -713,7 +704,7 @@ div.response-feedback span {
 .answered {
     background: #059669;
     color: white;
-     border-radius: 30px;
+    border-radius: 30px;
     padding: 10px 15px;
 }
 .answered:hover {

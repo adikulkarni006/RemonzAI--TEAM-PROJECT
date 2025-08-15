@@ -1,13 +1,9 @@
-// console.log("Project started successfully");
-// console.log("lets start");
-
 // const form = document.getElementById('queryForm');
-
 // form.addEventListener('submit', function(e) {
-//   e.preventDefault();
-//   const title = document.getElementById('title').value.trim();
-//   const category = document.getElementById('category').value;
-//   const description = document.getElementById('description').value.trim();
+// e.preventDefault();
+    const title = document.getElementById('title').value.trim();
+    const category = document.getElementById('category').value;
+    const description = document.getElementById('description').value.trim(); 
 
 //   if (!title || !description) {
 //     alert("Please fill in all fields.");
@@ -26,7 +22,6 @@
 //   form.reset();
 // });
 
-
 // DOM Elements
 const queryForm = document.getElementById('queryForm');
 const titleInput = document.getElementById('title');
@@ -43,14 +38,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Initialize application
 function initializeApp() {
-    // console.log('Student Query Portal initialized');
     loadRecentQueries();
     setupMobileResponsive();
 }
 
 // Setup event listeners
 function setupEventListeners() {
-    // Form submission
     queryForm.addEventListener('submit', handleFormSubmit);
     
     // Input animations
@@ -80,23 +73,12 @@ async function handleFormSubmit(e) {
     showLoadingState();
     
     try {
-        // Simulate API call (replace with actual API integration)
-        const response = await simulateAIResponse(title, category, description);
-        
-        // Show response
+        const response = await simulateAIResponse(title, category, description);       
         showAIResponse(response);
-        
-        // Add to recent queries
-        addToRecentQueries(title, category);
-        
-        // Show success notification
+        addToRecentQueries(title, category);       
         showNotification('Query submitted successfully!', 'success');
-        
-        // Reset form
-        resetForm();
-        
+        resetForm();       
     } catch (error) {
-        // console.error('Error submitting query:', error);
         showNotification('Error submitting query. Please try again.', 'error');
         hideLoadingState();
     }
@@ -121,7 +103,7 @@ function simulateAIResponse(title, category, description) {
 
                 'Syllabus': `Syllabus Query: "${title}"\n\n${description}\n\nTo view or download syllabus:\n\n• Visit your course portal\n• Contact the department head\n• Ask faculty directly for recent updates\n• Check for any curriculum changes for this semester`,
 
-                'Career': `Career Guidance: "${title}"\n\n${description}\n\nHere are steps you can take:\n\n• Visit the placement cell\n• Attend career counseling sessions\n• Improve LinkedIn/resume\n• Apply for internships\n• Explore job fairs or seminars\n\nWould you like tips for a specific field or role?`
+                'Career': `Career Guidance: "${title}"\n\n${description}\n\nHere are steps you can take:\n\n• Visit the placement cell\n• Attend career counseling sessions\n• Improve LinkedIn/resume\n• Apply for internships\n• Explore job fairs or seminars\n\nWould you like tips for a specific field or role?`,
 
             };
             
@@ -146,7 +128,6 @@ function showLoadingState() {
 function hideLoadingState() {
     answerTextarea.classList.remove('loading');
     
-    // Re-enable form
     const formElements = queryForm.querySelectorAll('input, select, textarea, button');
     formElements.forEach(element => {
         element.disabled = false;
@@ -158,7 +139,6 @@ function showAIResponse(response) {
     hideLoadingState();
     answerTextarea.value = response;
     
-    // Smooth scroll to response
     answerTextarea.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
@@ -179,7 +159,7 @@ function addToRecentQueries(title, category, timestamp) {
     newQuery.className = 'queries';
     newQuery.innerHTML = `
         <div>
-            <h3>${title}</h3>
+            <h4>${title}</h4>
             <p class="timestamp">🕒 <span>${timestamp}</span></p>
             <small style="color: #64748b; font-size: 12px;">${category} • Just now</small>
         </div>
@@ -312,13 +292,10 @@ function setupSidebarEvents() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             
-            // Remove active class from all links
             navLinks.forEach(l => l.classList.remove('active'));
             
-            // Add active class to clicked link
             this.classList.add('active');
             
-            // Handle navigation
             const label = this.querySelector('.nav-label').textContent;
             handleNavigation(label);
         });
@@ -348,19 +325,16 @@ function handleNavigation(section) {
             showNotification('Settings page coming soon!', 'info');
             break;
         case 'Help':
-            showNotification('Help: Use the form above to submit your queries. Our AI will respond shortly!', 'info');
+            scrollToSection('.help-section');
             break;
         case 'Login':
-            handleLogin();
+            window.location.href= 'login.html';
             break;
         case 'Signup':
-            handleSignup();
+            window.location.href = 'signup.html';
             break;
     }
 }
-
-
-
 
 // Scroll to section
 function scrollToSection(selector) {
@@ -369,16 +343,6 @@ function scrollToSection(selector) {
         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
-
-// Handle sign out
-function handleSignOut() {
-    if (confirm('Are you sure you want to Log out?')) {
-        showNotification('Log out...', 'info');
-        setTimeout(() => {
-            window.location.href = 'login.html';
-        }, 1500);
-    }
-}    
 
 // Setup mobile responsive behavior
 function setupMobileResponsive() {
@@ -406,7 +370,6 @@ function setupMobileResponsive() {
 
 // Load recent queries (simulate from local storage or API)
 function loadRecentQueries() {
-    // This would typically load from localStorage or an API
     const sampleQueries = [
         { title: 'How to prepare for final exams?', category: 'Exam', date: 'Today' },
         { title: 'Library book renewal process', category: 'Library', date: 'Yesterday' },
@@ -416,7 +379,6 @@ function loadRecentQueries() {
 
 // Show notification
 function showNotification(message, type = 'info') {
-    // Remove existing notifications
     const existing = document.querySelector('.notification');
     if (existing) {
         existing.remove();
@@ -480,7 +442,6 @@ window.addEventListener('resize', function() {
 
 // Handle keyboard shortcuts
 document.addEventListener('keydown', function(e) {
-    // Ctrl/Cmd + Enter to submit form
     if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
         if (document.activeElement === titleInput || document.activeElement === descriptionTextarea) {
             e.preventDefault();
@@ -514,7 +475,8 @@ function searchQueries(searchTerm) {
 function exportQueries() {
     const queries = Array.from(document.querySelectorAll('.queries')).map(query => ({
         title: query.querySelector('h3').textContent,
-        date: new Date().toLocaleDateString()
+        date: new Date().toLocaleString('en-IN', { dateStyle: 'short', timeStyle: 'short' })
+
     }));
     
     const dataStr = JSON.stringify(queries, null, 2);
@@ -651,7 +613,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Utility functions
 const utils = {
-    // Format date
     formatDate: function(date) {
         return new Date(date).toLocaleDateString('en-US', {
             year: 'numeric',
@@ -694,7 +655,6 @@ const utils = {
 const analytics = {
     trackEvent: function(eventName, data = {}) {
         console.log('Analytics Event:', eventName, data);
-        // This would integrate with Google Analytics, Mixpanel, etc.
     },
     
     trackPageView: function(page) {
@@ -735,7 +695,6 @@ window.addEventListener('unhandledrejection', function(e) {
 });
 
 // Service Worker registration (for future PWA enhancement)
-<<<<<<<< HEAD:frontend/js/app.js
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
         navigator.serviceWorker.register('/sw.js')
@@ -743,23 +702,9 @@ if ('serviceWorker' in navigator) {
                 console.log('ServiceWorker registration successful');
             })
             .catch(function(err) {
-                console.log('ServiceWorker registration failed', err);
             });
     });
 }
-========
-// if ('serviceWorker' in navigator) {
-//     window.addEventListener('load', function() {
-//         navigator.serviceWorker.register('/sw.js')
-//             .then(function(registration) {
-//                 console.log('ServiceWorker registration successful');
-//             })
-//             .catch(function(err) {
-//                 console.log('ServiceWorker registration failed');
-//             });
-//     });
-// }
->>>>>>>> 7b792246c9410d2b04d787179248318384982c3b:backend/public/js/app.js
 
 // TOAST QUERY SUBMIT
 function showToast() {
@@ -787,27 +732,11 @@ function downloadResponse() {
 
 // FILE UPLOAD 
 document.getElementById('file-upload').addEventListener('change', function() {
-    const fileName = this.files[0] ? this.files[0].name : 'No file chosen';
+    const fileName = this.files[0] ? this.files[0].name : 'No file chosen!';
     document.getElementById('file-name').textContent = fileName;
 });
 
-// // PROJECT NAME 
-// const text = "RemonzAi!";
-// let index = 0;
-// function type() {
-//     if (index < text.length) {
-//         document.getElementById("animatedTitle").innerHTML += text.charAt(index);
-//         index++;
-//         setTimeout(type, 100);
-//     }
-// }
-// window.onload = type;
-
-// function toggleSidebar() {
-//     document.getElementById("sidebar").classList.toggle("active");
-// }
-
-// Seaarch Logic 
+// Search Logic 
 document.getElementById("searchQuery").addEventListener("input", function () {
     const value = this.value.toLowerCase();
     const allQueries = document.querySelectorAll(".query-card");
@@ -829,5 +758,4 @@ allQueries.forEach(card => {
 });
 
 const timestamp = new Date().toLocaleString();
-query.timestamp = timestamp; 
-
+query.timestamp = timestamp;

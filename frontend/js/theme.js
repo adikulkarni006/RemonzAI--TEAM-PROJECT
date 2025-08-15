@@ -22,7 +22,6 @@ toggleBtn.addEventListener("click", () => {
 });
 });
 
-
 // PROJECT NAME - animated
 const text = "RemonzAi!";
 let index = 0;
