@@ -79,7 +79,7 @@ body {
     margin-bottom: 28px;
     padding: 10px;
     background: linear-gradient(135deg,  #6366f1, #8b5cf6);
-    border-radius: 15px;
+    border-radius: 30px;
     box-shadow: 0 4px 15px rgba(41, 98, 255, 0.3);
 }
 
@@ -102,7 +102,7 @@ body {
     margin: 1rem 0;
     flex-direction: column;
     gap: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .nav-item .nav-link {
@@ -113,7 +113,7 @@ body {
     text-decoration: none;
     color: #6366f1;
     font-weight: 500;
-    border-radius: 10px;
+    border-radius: 30px;
     transition: all 0.3s ease;
     position: relative; /* Add this */
 }
